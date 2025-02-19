@@ -84,7 +84,7 @@ python manage.py runserver
 
 2. In a separate terminal, run the monitoring script:
 ```bash
-python main.py
+python hardware_monitor.py
 ```
 
 3. Access the web dashboard:
@@ -105,7 +105,7 @@ hardwareMonitor/
 │   └── views.py
 ├── templates/
 │   └── monitor.html
-├── main.py
+├── hardware_monitor.py
 └── manage.py
 ```
 
