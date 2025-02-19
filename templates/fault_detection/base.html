@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <head>
+        {% load static %}
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="la-themes">
+        <link rel="icon" href="{% static 'images/logo/favicon.png' %}" type="image/x-icon">
+        <link rel="shortcut icon" href="{% static 'images/logo/favicon.png' %}" type="image/x-icon">
+        <title>Monitor System | {% block title %}{% endblock title %}</title>
+        <link rel="stylesheet" href="{% static 'vendor/animation/animate.min.css' %}" >
+        <link href="../fonts.googleapis.com/index.html" rel="preconnect">
+        <link crossorigin href="../fonts.gstatic.com/index.html" rel="preconnect">
+        <link href="../fonts.googleapis.com/css2ca34.css?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap"
+            rel="stylesheet">
+        <link href="{% static 'vendor/ionio-icon/css/iconoir.css' %}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/weather/weather-icons.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/weather/weather-icons-wind.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/flag-icons-master/flag-icon.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/tabler-icons/tabler-icons.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/prism/prism.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/bootstrap.min.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/simplebar/simplebar.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'vendor/apexcharts/apexcharts.css' %}">
+        <link rel="stylesheet" href="{% static 'vendor/slick/slick.css' %}">
+        <link rel="stylesheet" href="{% static 'vendor/slick/slick-theme.css' %}">
+        <link href="{% static 'vendor/filepond/filepond.css' %}" rel="stylesheet">
+        <link href="{% static 'vendor/filepond/image-preview.min.css' %}" rel="stylesheet">
+        <link rel="preload" as="style" href="{% static 'style-BfW0E3X2.css' %}" /><link rel="stylesheet" href="{% static 'style-BfW0E3X2.css' %}" /><!-- css end-->
+    </head>
+
+    <body>
+        <div class="app-wrapper">
+            <div class="loader-wrapper">
+                <div class="loader_16"></div>
+            </div>
+          
+        <nav>
+            <div class="app-nav" id="app-simple-bar">
+                <ul class="main-nav p-0 mt-2">
+                    <li class="menu-title">
+                        <span>Dashboard</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-navs">
+                <span class="menu-previous"><i class="ti ti-chevron-left"></i></span>
+                <span class="menu-next"><i class="ti ti-chevron-right"></i></span>
+            </div>
+
+        </nav>
+
+            <div class="app-content">
+        <header class="header-main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-6 col-sm-4 d-flex align-items-center header-left p-0">
+                        <span class="header-toggle me-3">
+                            <i class="iconoir-view-grid"></i>
+                        </span>
+                    </div>
+
+                    <div class="col-6 col-sm-8 d-flex align-items-center justify-content-end header-right p-0">
+
+                        <ul class="d-flex align-items-center">
+
+                           
+                            <li class="header-notification">
+                                <a aria-controls="notificationcanvasRight"
+                                class="d-block head-icon position-relative"
+                                data-bs-target="#notificationcanvasRight"
+                                data-bs-toggle="offcanvas"
+                                href="#"
+                                role="button">
+                                    <i class="iconoir-bell"></i>
+                                    <span
+                                        class="position-absolute translate-middle p-1 bg-success border border-light rounded-circle animate__animated animate__fadeIn animate__infinite animate__slower"></span>
+                                </a>
+                                <div aria-labelledby="notificationcanvasRightLabel"
+                                    class="offcanvas offcanvas-end header-notification-canvas"
+                                    id="notificationcanvasRight" tabindex="-1">
+                                    <div class="offcanvas-header">
+                                        <h5 class="offcanvas-title" id="notificationcanvasRightLabel">
+                                            Notification</h5>
+                                        <button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas"
+                                                type="button"></button>
+                                    </div>
+                                    <div class="offcanvas-body notification-offcanvas-body app-scroll p-0">
+                                        <div class="head-container notification-head-container">
+                                            <!-- <div class="notification-message head-box">
+                                                <div class="message-images">
+                                                                <span
+                                                                    class="bg-secondary h-35 w-35 d-flex-center b-r-10 position-relative">
+                                                                    <img alt="avtar" class="img-fluid b-r-10"
+                                                                        src="{% static 'images/ai_avtar/6.jpg' %}">
+                                                                    <span
+                                                                        class="position-absolute bottom-30 end-0 p-1 bg-secondary border border-light rounded-circle notification-avtar"></span>
+                                                                </span>
+                                                </div>
+                                                <div class="message-content-box flex-grow-1 ps-2">
+
+                                                    <a class="f-s-15 text-secondary mb-0"
+                                                    href="read_email.html" target="_blank"><span
+                                                            class="f-w-500 text-secondary">Gene Hart</span> wants to
+                                                        edit <span
+                                                            class="f-w-500 text-secondary">Report.doc</span></a>
+                                                    <div>
+                                                        <a class="d-inline-block f-w-500 text-success me-1"
+                                                        href="#">Approve</a>
+                                                        <a class="d-inline-block f-w-500 text-danger"
+                                                        href="#">Deny</a>
+                                                    </div>
+                                                    <span class="badge text-light-primary mt-2"> sep 23 </span>
+
+                                                </div>
+                                                <div class="align-self-start text-end">
+                                                    <i class="iconoir-xmark close-btn"></i>
+                                                </div>
+                                            </div> -->
+                                            
+
+                                            <!-- <div class="hidden-massage py-4 px-3">
+                                                <img alt=""
+                                                    class="w-50 h-50 mb-3 mt-2"
+                                                    src="assets/images/icons/bell.png">
+                                                <div>
+                                                    <h6 class="mb-0">Notification Not Found</h6>
+                                                    <p class="text-secondary">When you have any notifications added
+                                                        here,will
+                                                        appear here.
+                                                    </p>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </li>
+
+                            <li class="header-profile">
+                                <a aria-controls="profilecanvasRight" class="d-block head-icon"
+                                data-bs-target="#profilecanvasRight" data-bs-toggle="offcanvas"
+                                href="#" role="button">
+                                    <img alt="avtar" class="b-r-50 h-35 w-35 bg-dark"
+                                        src="{% static 'images/avtar/woman.jpg' %}">
+                                </a>
+
+                                <div aria-labelledby="profilecanvasRight"
+                                    class="offcanvas offcanvas-end header-profile-canvas"
+                                    id="profilecanvasRight"
+                                    tabindex="-1">
+                                    <div class="offcanvas-body app-scroll">
+                                        <ul class="">
+                                            <li class="d-flex gap-3 mb-3">
+                                                <div class="d-flex-center">
+                                                            <span class="h-45 w-45 d-flex-center b-r-10 position-relative">
+                                                            <img alt="" class="img-fluid b-r-10"
+                                                                src="{% static 'assets/images/avtar/woman.jpg' %}">
+                                                            </span>
+                                                </div>
+                                                <div class="text-center mt-2">
+                                                    <h6 class="mb-0"> {{ request.user.username }}</h6>
+                                                    <p class="f-s-12 mb-0 text-secondary">{{ request.user.email }}</p>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <a class="f-w-500" href="#" target="_blank">
+                                                    <i class="iconoir-user-love pe-1 f-s-20"></i> Profile
+                                                    Details
+                                                </a>
+                                            </li>
+                                            
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        {% block content %} {% endblock content %}
+
+        </div>
+
+            <div class="go-top">
+            <span class="progress-value">
+                <i class="ti ti-chevron-up"></i>
+            </span>
+            </div>
+
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-9 col-12">
+                        <ul class="footer-text">
+                            <li>
+                                <p class="mb-0">Copyright © 2025. All rights reserved. Made with 💖 by Student</p>
+                            </li>
+                            <li><a href="#"> V1.0.0 </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        </div>
+    </body>
+
+    <div id="customizer"></div>
+    <script src="{% static 'js/jquery-3.6.3.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'vendor/simplebar/simplebar.js' %}"></script>
+    <script src="{% static 'vendor/phosphor/phosphor.js' %}"></script>
+    <script src="{% static 'js/customizer.js' %}"></script>
+    <script src="{% static 'vendor/prism/prism.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'vendor/slick/slick.min.js' %}"></script>
+    <script src="{% static 'vendor/apexcharts/apexcharts.min.js' %}"></script>
+    <script src="{% static 'vendor/filepond/file-encode.min.js' %}"></script>
+    <script src="{% static 'vendor/filepond/validate-size.min.js' %}"></script>
+    <script src="{% static 'vendor/filepond/validate-type.js' %}"></script>
+    <script src="{% static 'vendor/filepond/exif-orientation.min.js' %}"></script>
+    <script src="{% static 'vendor/filepond/image-preview.min.js' %}"></script>
+    <script src="{% static 'vendor/filepond/filepond.min.js' %}"></script>
+
+    <script src="{% static 'js/project_dashboard.js' %}"></script>
+
+</html>
