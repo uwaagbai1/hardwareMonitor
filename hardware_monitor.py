@@ -436,6 +436,6 @@ class EnhancedHardwareMonitor:
                 time.sleep(5)
 
 if __name__ == "__main__":
-    PUSHBULLET_API_KEY = "o.CTb0dwWcb7LdxuKKVaZDQmfYIZcbPCVS"
+    PUSHBULLET_API_KEY = ""
     monitor = EnhancedHardwareMonitor(PUSHBULLET_API_KEY)
     monitor.run_monitor()
